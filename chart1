@@ -1,1 +1,47 @@
 
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Exports",
+    "subtitle": "Goods, £ million GBP | Source: ONS through ECO API",
+    "fontSize": "16",
+    "subtitleFontSize": "14",
+    "color": "#4812d2",
+    "subtitleColor": "#990dc4"
+  },
+  "height": "250",
+  "width": "320",
+  "background": "#000000",
+  "view": {
+    "fill": "#000000"
+  },
+  "data": {
+    "url": "https://api.economicsobservatory.com/gbr/expo?vega",
+    "format": {
+      "type": "json"
+    }
+  },
+  "mark": {
+    "type": "line",
+    "color": "#da0d40",
+    "strokeWidth": "3"
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": "Hey hey hey hey",
+        "titleColor": "#25c79f"
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": {
+        "title": "what's going on",
+        "titleColor": "#efba1b"
+      }
+    }
+  }
+}
